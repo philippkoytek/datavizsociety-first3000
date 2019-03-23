@@ -1,0 +1,15 @@
+div#canvas {
+    background: aliceblue;
+    position: relative;
+}
+
+canvas#map {
+    position: relative;
+}
+
+canvas#time-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+

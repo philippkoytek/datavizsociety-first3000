@@ -12,7 +12,7 @@
     
     d3.json("data/50m.json")
         .then(function(world){
-            land = topojson.feature(world, world.objects.land);
+            land = topojson.feature(world, world.objects.countries);
             return d3.csv("data/dvs_challenge_1_membership_time_space.csv");
         })
         .then(function(membersRaw){

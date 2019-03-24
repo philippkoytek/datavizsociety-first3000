@@ -64,11 +64,16 @@ const map = (function(){
     }
 
     function drawWorld(){
+        context.save();
         const geoPath = d3.geoPath(map.projection, context);
         context.beginPath();
         geoPath(withoutAntarctica);
         context.fillStyle = util.mapLandColor;
         context.fill();
+        context.strokeStyle = util.mapWaterColor;
+        context.lineWidth = 0.5;
+        context.stroke();
+        context.restore();
     }
 
     function drawTriangles(){

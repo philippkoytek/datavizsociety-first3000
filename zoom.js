@@ -13,15 +13,15 @@ const zoom = (function(){
         updateCallback();
     }
       
-    z.init = function(div, width, height, callback){
+    z.init = function(container, callback){
         updateCallback = callback;
         origT = map.projection.translate();
         origS = map.projection.scale();
         const zoom = d3.zoom()
-            .translateExtent([[0,0],[width, height]])
+            .translateExtent([[0,0],[container.attr('width'), container.attr('height')]])
             .scaleExtent([1, 90])
             .on("zoom", zoomed); 
-        div.on("zoom", null).call(zoom);
+        container.on("zoom", null).call(zoom);
     };
 
     return z;  

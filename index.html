@@ -6,19 +6,32 @@
 
 <body>	
 	<div id="canvas">
-		<canvas id="map" width="900" height="690"></canvas>
-		<canvas id="time-line" width="900" height="690"></canvas>
+		<canvas id="map"></canvas>
+		<canvas id="time-line"></canvas>
+		<svg id="interaction">
+			<g class="map"><rect x="0" y="0" fill="none"></rect></g>
+			<g class="timeline"><rect x="0" y="0" fill="none"></rect></g>
+		</svg>
 	</div>
 
+	<!--
+		d3 = require(
+			"d3-zoom", "d3-selection", "d3-fetch", "d3-geo@1", "d3-geo-projection@2", "d3-scale", "d3-shape", "d3-array", "d3-time", "d3-time-format", "d3-geo-voronoi@1.0"
+		)
+	-->
 	<script src="https://d3js.org/d3.v5.min.js"></script>
-	<script src="https://d3js.org/d3-queue.v3.min.js"></script>
-	<script src="https://d3js.org/d3-array.v2.min.js"></script>
+
 	<script src="https://d3js.org/d3-geo.v1.min.js"></script>
 	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script src="https://d3js.org/d3-array.v2.min.js"></script>
 	<script src="https://unpkg.com/topojson-client@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3-delaunay@4.1.5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3-geo-voronoi@1.1.2"></script>
 
 
-	<script src="utils.js"></script>
+	<script src="lasso.js"></script>
+	<script src="util.js"></script>
+	<script src="interaction.js"></script>
 	<script src="map.js"></script>
 	<script src="timeline.js"></script>
 	<script src="zoom.js"></script>

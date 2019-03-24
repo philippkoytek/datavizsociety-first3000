@@ -1,13 +1,22 @@
 div#canvas {
-    background: aliceblue;
     position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 canvas#map {
     position: relative;
 }
 
-canvas#time-line {
+g.map {
+    cursor:grab;
+}
+
+g.timeline {
+    cursor: crosshair;
+}
+
+canvas#time-line, svg#interaction {
     position: absolute;
     left: 0;
     top: 0;
